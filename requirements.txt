@@ -3,3 +3,5 @@
 
 # external requirements
 numpy
+torch
+beartype
