@@ -13,3 +13,4 @@ hypothesis
 GitPython
 natsort
 pandas
+tqdm
