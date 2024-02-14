@@ -1,5 +1,4 @@
 [tool.ruff]
-line-length = 120
 extend-include = ["*.ipynb"]
 
 [tool.ruff.format]
