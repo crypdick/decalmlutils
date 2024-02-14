@@ -9,4 +9,4 @@ docstring-code-format = true
 
 [tool.ruff.lint.isort]
 known-local-folder = ["rd_utils"]
-known_first_party=["rd_utils"]
+known-first-party=["rd_utils"]
