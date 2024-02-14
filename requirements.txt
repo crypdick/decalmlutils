@@ -2,9 +2,11 @@
 -e .
 
 # external requirements
+boto3
 numpy
 torch
 beartype
 torchvision
 pydantic
 pydantic-settings
+hypothesis
