@@ -92,3 +92,6 @@ target/
 
 # Exclude any virtual environment.
 venv/
+
+.hypothesis/examples/*
+*.gz
