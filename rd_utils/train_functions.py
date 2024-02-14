@@ -1,9 +1,12 @@
 import random
-from typing import Optional
+from typing import Callable, List, Literal, Optional
 
 import numpy as np
 import torch
 from beartype import beartype
+from torchvision import transforms
+
+TransformVersion = Literal["v1", "v2", "v3"]
 
 
 @beartype
@@ -37,3 +40,55 @@ def generate_seed() -> int:
     MAX_ALLOWED_NUMPY_SEED = 2**32 - 1
     seed = np.random.randint(0, MAX_ALLOWED_NUMPY_SEED)
     return seed
+
+
+@beartype
+def _transforms_eval(
+    mean: List[float],
+    stddev: List[float],
+    version: TransformVersion,
+) -> Callable:
+    """
+    Minimal set of transforms for evaluation.
+    """
+    if version == "v1":
+        transform = transforms.Compose(
+            [
+                transforms.Resize((224, 224)),
+                transforms.ToTensor(),
+                transforms.Normalize(mean=mean, std=stddev),
+            ]
+        )
+    else:
+        raise ValueError(f"Unknown version of transforms: {version}")
+    return transform
+
+
+@beartype
+def create_transform(
+    kind: Literal["train", "eval", "corrupt"],
+    mean: Optional[List[float]],
+    stddev: Optional[List[float]],
+    version: TransformVersion = "v3",
+    **kwargs,
+) -> Callable:
+    """
+    A transforms factory; decides whether to create preprocessing, training, or evaluation transforms.
+
+    Args:
+        version: version of augmentations to use
+        magnitude: training augmentation magnitude
+        mean: training dataset mean
+        stddev: training dataset standard devation
+        kind: flag for kind of transform to generate
+
+    Returns:
+        PyTorch Transforms
+    """
+
+    if kind == "eval":
+        transform = _transforms_eval(mean, stddev, version=version)
+    else:
+        raise ValueError(f"Unknown kind of transform: {kind}")
+
+    return transform
