@@ -10,3 +10,4 @@ torchvision
 pydantic
 pydantic-settings
 hypothesis
+GitPython
