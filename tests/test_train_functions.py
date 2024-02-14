@@ -1,4 +1,4 @@
-from rd_utils.train_functions import create_transform, generate_seed, seed_everything
+from rd_utils.training import create_transform, generate_seed, seed_everything
 
 
 def test_seed_everything():
