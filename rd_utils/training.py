@@ -1,5 +1,5 @@
 import random
-from typing import Callable, List, Literal, Optional
+from typing import Callable, Literal, Optional
 
 import numpy as np
 import torch
@@ -44,8 +44,8 @@ def generate_seed() -> int:
 
 @beartype
 def _transforms_eval(
-    mean: List[float],
-    stddev: List[float],
+    mean: list[float],
+    stddev: list[float],
     version: TransformVersion,
 ) -> Callable:
     """
@@ -67,8 +67,8 @@ def _transforms_eval(
 @beartype
 def create_transform(
     kind: Literal["train", "eval", "corrupt"],
-    mean: Optional[List[float]],
-    stddev: Optional[List[float]],
+    mean: Optional[list[float]],
+    stddev: Optional[list[float]],
     version: TransformVersion = "v3",
     **kwargs,
 ) -> Callable:

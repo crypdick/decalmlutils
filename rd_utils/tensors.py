@@ -2,14 +2,13 @@
 Functions that are used on array like variables/objects.
 """
 
-from typing import List, Tuple
-
+from typing import Tuple
 
 from beartype import beartype
 
 
 @beartype
-def get_chunks(num_items: int, chunk_size: int = 100_000) -> List[Tuple[int, int]]:
+def get_chunks(num_items: int, chunk_size: int = 100_000) -> list[Tuple[int, int]]:
     """
     Produces chunk indices for metaflow for_each fan-outs.
 
