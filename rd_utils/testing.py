@@ -1,12 +1,16 @@
-"""Utilities for testing."""
+"""
+Utilities for testing.
+"""
 
 import importlib
 import pkgutil
 from types import ModuleType
-
 from typing import Dict, Union
 
+from beartype import beartype
 
+
+@beartype
 def _import_submodules(package: Union[str, ModuleType]) -> Dict[str, ModuleType]:
     """
     Import all submodules of a module, recursively, including subpackages.
