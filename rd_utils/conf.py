@@ -35,6 +35,11 @@ class Settings(BaseSettings):
     SNS_TOPIC_ARN: str = "arn:aws:sns:us-east-1:123:Slacker"
     DEFAULT_SLACK_CHANNEL: str = "ml-microservice-errors"
     ML_ALERTS_CHANNEL: str = "ml-alerts"
+    """
+    PATHS.
+    """
+    LOCAL_DATA_DIR: str = "/tmp"
+    LOG_FPATH: str = "/tmp/ml.log"
 
 
 settings = Settings()
