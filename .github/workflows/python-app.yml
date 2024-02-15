@@ -26,8 +26,10 @@ jobs:
         python-version: "3.11"
     - name: Install dependencies
       run: |
+        echo $(python --version)
         python -m pip install --upgrade pip
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+        make test_config
     - name: Run tests
       run: |
         make unittest

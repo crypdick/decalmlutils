@@ -17,6 +17,9 @@ clean-pyc: ## Remove Python file artifacts
 	@find . -type f -name '*.py[co]' -exec rm -f {} +
 	@find . -name '*~' -exec rm -f {} +
 
+test_config:			## create a ~/.metaflow/config_test.json for using METAFLOW_PROFILE=test
+	mkdir -p ~/.metaflowconfig
+	echo '{"METAFLOW_DEFAULT_METADATA": "local", "METAFLOW_DATASTORE_SYSROOT_LOCAL": "/tmp/metaflow", "METAFLOW_DEFAULT_DATASTORE": "local"}' > ~/.metaflowconfig/config_test.json
 
 .PHONY: help
 help: ## Display make help.
@@ -25,4 +28,3 @@ help: ## Display make help.
 unittest:  ## run unit tests
 	@echo "+ $@"
 	@$(PYTHON_INTERPRETER) -m pytest --numprocesses=auto --failed-first --dist=loadfile -vv --durations=10
-
