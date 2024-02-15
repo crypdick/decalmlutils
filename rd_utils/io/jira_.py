@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-from io.aws.secretsmanager import get_secret
+from rd_utils.io.aws.secretsmanager import get_secret
 
 from beartype import beartype
 from beartype.typing import Dict, Optional
