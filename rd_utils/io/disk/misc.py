@@ -4,10 +4,11 @@ import logging
 import os
 import pickle
 from contextlib import suppress
-from io.context import safe_open
 
 from beartype import beartype
 from beartype.typing import Any
+
+from rd_utils.io.context import safe_open
 
 # note: do not use get_cloudwatch_logger() here. it will cause Ray serialization errors
 logger = logging.getLogger(__name__)
