@@ -34,6 +34,7 @@ class Settings(BaseSettings):
     AWS_SNS_REGION: str = "us-east-1"
     SNS_TOPIC_ARN: str = "arn:aws:sns:us-east-1:123:Slacker"
     DEFAULT_SLACK_CHANNEL: str = "ml-microservice-errors"
+    ML_ALERTS_CHANNEL: str = "ml-alerts"
 
 
 settings = Settings()

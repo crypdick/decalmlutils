@@ -46,3 +46,4 @@ repos:
       exclude: \.rst$|\.pot?$
     - id: name-tests-test
       args: ['--django']   # to match test*.py instead of *test.py
+    - id: requirements-txt-fixer

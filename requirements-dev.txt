@@ -1,6 +1,9 @@
 -r requirements.txt
+bump2version
+pre-commit
 
 pytest
-pre-commit
-bump2version
+pytest-cov
+pytest-env
+pytest-mock
 pytest-xdist

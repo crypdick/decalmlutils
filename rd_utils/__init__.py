@@ -10,7 +10,7 @@ from .tensors import *
 
 from .web import *
 
-from .plot_functions import *
+from .plotting import *
 
 from .text import *
 

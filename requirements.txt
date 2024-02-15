@@ -1,16 +1,25 @@
-# local package
--e .
 
-# external requirements
-boto3
-numpy
-torch
+-e .
 beartype
-torchvision
+
+
+boto3
+geojson
+GitPython
+graphviz
+hypothesis
+jira
+metaflow
+natsort
+numpy
+pandas
+pyarrow
 pydantic
 pydantic-settings
-hypothesis
-GitPython
-natsort
-pandas
+ray==2.9.2
+slack_sdk
+tenacity
+torch
+torchvision
 tqdm
+watchtower
