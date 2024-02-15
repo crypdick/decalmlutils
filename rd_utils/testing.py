@@ -5,9 +5,9 @@ Utilities for testing.
 import importlib
 import pkgutil
 from types import ModuleType
-from typing import Dict, Union
 
 from beartype import beartype
+from beartype.typing import Dict, Union
 
 
 @beartype

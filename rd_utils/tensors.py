@@ -2,9 +2,8 @@
 Functions that are used on array like variables/objects.
 """
 
-from typing import Tuple
-
 from beartype import beartype
+from beartype.typing import Tuple
 
 
 @beartype

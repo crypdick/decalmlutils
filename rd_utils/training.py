@@ -1,12 +1,13 @@
 import random
-from typing import Callable, Literal, Optional
 
 import numpy as np
 import torch
 from beartype import beartype
+from beartype.typing import Callable, Literal, Optional
 from torchvision import transforms
 
 TransformVersion = Literal["v1", "v2", "v3"]
+TransformType = Literal["train", "eval", "corrupt"]
 
 
 @beartype
@@ -66,7 +67,7 @@ def _transforms_eval(
 
 @beartype
 def create_transform(
-    kind: Literal["train", "eval", "corrupt"],
+    kind: TransformType,
     mean: Optional[list[float]],
     stddev: Optional[list[float]],
     version: TransformVersion = "v3",

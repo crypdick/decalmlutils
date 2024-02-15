@@ -5,12 +5,14 @@ import random
 import re
 import string
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Literal, Optional, Set, Tuple, Union
 
 import numpy as np
 from beartype import beartype
+from beartype.typing import Any, Dict, List, Literal, Optional, Set, Tuple, Union
 
 from rd_utils.io.sort import natural_sort
+
+DateType = Literal[None, "date", "datetime"]
 
 
 @beartype
@@ -167,7 +169,7 @@ def pandas_print_everything():
 
 @beartype
 def kwargs_to_filename(
-    date: Literal[None, "date", "datetime"] = None,
+    date: DateType = None,
     ext="",
     suffix: Optional[str] = None,
     key_only: Optional[list[str]] = None,

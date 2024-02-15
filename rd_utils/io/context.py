@@ -5,9 +5,9 @@ import signal
 import tempfile
 import time
 from contextlib import contextmanager
-from typing import Union
 
 from beartype import beartype
+from beartype.typing import Union
 
 logger = logging.getLogger(
     __name__
