@@ -19,14 +19,14 @@ known-first-party=["rd_utils"]
 # --hypothesis-explain: explain hypothesis failures
 # --numprocesses=auto: use all available cores. requires pytest-xdist
 # --durations=10: show the 10 slowest tests
-# --show-locals: show local variables in tracebacks
+# --showlocals: show local variables in tracebacks
 addopts = """
 --failed-first \
 --new-first \
 --hypothesis-explain \
 --numprocesses=auto \
 --durations=10 \
---show-locals
+--showlocals
 """
 # set env vars for pytest. requires pytest-env
 env = [
