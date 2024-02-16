@@ -3,9 +3,8 @@ import logging.handlers
 import sys
 import traceback
 
-from rd_utils.io.disk.misc import create_dir_if_not_exists
-
 from .conf import settings
+from .io.disk.misc import create_dir_if_not_exists
 
 LEVEL = logging.INFO  # set global logging level
 
