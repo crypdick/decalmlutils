@@ -2,16 +2,13 @@
 # make sure warnings are imported
 import warnings
 
+from rd_utils.logging import setup_default_logging
+
 # always show deprecation warnings
 warnings.simplefilter("always", DeprecationWarning)
 
-# FIXME: replace blob with explicit imports in the future and re-enable F403
-from .tensors import *
-
-from .web import *
-
-from .plotting import *
-
-from .text import *
 
 __version__ = "0.0.1"
+
+
+setup_default_logging()
