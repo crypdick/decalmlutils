@@ -16,6 +16,7 @@ pandas
 pyarrow
 pydantic
 pydantic-settings
+pyinstrument
 ray==2.9.2
 slack_sdk
 tenacity
