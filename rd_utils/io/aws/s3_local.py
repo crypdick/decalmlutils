@@ -18,10 +18,7 @@ import ray
 from beartype import beartype
 from beartype.typing import Any, Dict, List, NamedTuple, Optional, Tuple
 from metaflow import S3
-from tenacity import retry
-from tenacity.retry import retry_if_exception_type
-from tenacity.stop import stop_after_attempt
-from tenacity.wait import wait_fixed
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fixed
 from tqdm import tqdm
 
 from rd_utils.conf import settings
@@ -219,9 +216,6 @@ def check_get_img(
                 )
             delete_file_if_exists(destination_fpath)
             raise e  # handled by @retry
-        except WrongNumChannels as e:
-            logger.warning(f"Incorrect Dimension {s3url}")
-            raise e
         except Exception as e:
             logger.warning(f"Failed to load {s3url} with exception {e}")
             raise e
@@ -503,12 +497,6 @@ def load_s3_parquet(
         )
 
     return df
-
-
-class WrongNumChannels(Exception):
-    def __init__(self, message="Image should have 3 channels"):
-        self.message = message
-        pass
 
 
 @ray.remote
