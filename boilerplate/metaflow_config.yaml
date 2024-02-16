@@ -1,0 +1,14 @@
+docstring: "This pipeline is boilerplate for a metaflow pipeline."
+name: HelloFlowPipeline
+filename: hello_flow_pipeline.py
+test_mode:
+params:
+  - name: srcrun_inference2hello
+    type: str
+    default: None
+    help: Comma separated list of pathspecs of the Inference pipeline. All the runs must be for the same model version but different layer.
+    separator: ","
+  - name: base-url
+    type: str
+    default: 123
+    help: base url for skai api

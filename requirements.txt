@@ -4,10 +4,12 @@ beartype
 
 
 boto3
+click
 geojson
 GitPython
 graphviz
 hypothesis
+jinja2
 jira
 metaflow
 natsort

@@ -1,0 +1,83 @@
+"""
+{{ docstring }}
+"""
+import os
+
+from metaflow import FlowSpec, Parameter, step
+
+
+class {{ name }}(FlowSpec):
+    {% for prm in params %}
+    {{ prm['name'].replace("-", "_") }} = Parameter(
+        "{{ prm['name'].replace("_", "-") }}",
+        type={{ prm.get('type', str) }},
+        default={{ prm.get('default', None) }},
+        help="{{ prm.get('help', "") }}",
+        {% if prm.get('separator', False) %}separator="{{prm. get('separator') }}",
+        {%- endif %}
+    )
+    {%- endfor %}
+
+    {%- if test_mode != None and test_mode.replace("_", "-") not in params %}
+    {{ test_mode.replace("-", "_")|default("smoke_test", true) }} = Parameter(
+        "{{ test_mode.replace("_", "-")|default("smoke_test", true) }}",
+        default=False,
+        type=bool,
+        help="Flag to run a smoke test",
+    )
+    {% endif %}
+
+    @step
+    def start(self):
+        import time
+
+        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
+        from rd_utils.util.constants import METAFLOW_PROD_PROFILE
+
+        self.start_time = time.time()
+        {% if test_mode == None %}
+        # NOTE: no test mode defined
+        self.mode = os.environ.get("METAFLOW_PROFILE", METAFLOW_PROD_PROFILE)
+        self.is_test = self.mode in ["test"]
+        {% elif test_mode in ["smoke_test", "smoke-test"]%}
+        self.mode = "subset" if self.smoke_test else os.environ.get("METAFLOW_PROFILE", METAFLOW_PROD_PROFILE)
+        self.is_test = self.mode in ["test", "subset"]
+        {% elif test_mode in ["smoke_test", "smoke-test"] %}
+        self.mode = "smoke_test" if self.smoke_test else os.environ.get("METAFLOW_PROFILE", METAFLOW_PROD_PROFILE)
+        self.is_test = self.mode in ["test", "smoke_test"]
+        {% else %}
+        self.mode = "{{ test_mode.replace("-", "_") }}" if self.{{ test_mode.replace("_", "-") }} else os.environ.get("METAFLOW_PROFILE", METAFLOW_PROD_PROFILE)
+        self.is_test = self.mode in ["test", "{{ test_mode.replace("-", "_") }}"]
+        {% endif %}
+        logger = get_cloudwatch_logger(os.path.basename(__file__))
+        logger.info(f"MODE = {self.mode}")
+
+        self.next(self.process)
+
+    @step
+    def process(self):
+        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
+        logger = get_cloudwatch_logger(os.path.basename(__file__))
+        logger.info("Starting processing...")
+
+        self.next(self.end)
+
+    @step
+    def end(self):
+        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
+        from rd_utils.io.aws.cloudwatch_metrics import alert_job_finished
+        logger = get_cloudwatch_logger(os.path.basename(__file__))
+        logger.info("Sending alerts...")
+
+        alert_job_finished(
+            mode=self.mode,
+            start_time=self.start_time,
+            msg=(
+                f"artiface_one=`{self.artiface_one}`,\n"
+                f"artiface_two=`{self.artiface_two}`,\n"
+                f"artiface_three=`{self.artiface_three}`,\n"
+            ),
+        )
+
+if __name__ == "__main__":
+    {{ name }}()
