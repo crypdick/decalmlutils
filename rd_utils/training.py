@@ -109,3 +109,15 @@ def count_params(model):
             trainable += p.numel()
     print(f"total params: {millify(total)}. Trainable params: {millify(total)}")
     return total, trainable
+
+
+def compute_grad_norm(model):
+    grads = [
+        param.grad.detach().flatten()
+        for param in model.parameters()
+        if param.grad is not None and param.requires_grad
+    ]
+
+    grad_norm = torch.cat(grads).norm().item()
+
+    return grad_norm
