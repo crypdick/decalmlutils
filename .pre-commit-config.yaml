@@ -40,7 +40,6 @@ repos:
     - id: check-yaml
     - id: check-toml
     - id: check-ast
-    - id: check-yaml
       language: python
       types: [python]
     - id: check-merge-conflict

@@ -6,6 +6,8 @@ from beartype import beartype
 from beartype.typing import Callable, Literal, Optional
 from torchvision import transforms
 
+from rd_utils.io.misc import millify
+
 TransformVersion = Literal["v1", "v2", "v3"]
 TransformType = Literal["train", "eval", "corrupt"]
 
@@ -93,3 +95,17 @@ def create_transform(
         raise ValueError(f"Unknown kind of transform: {kind}")
 
     return transform
+
+
+def count_params(model):
+    """
+    Count the number of parameters in a model.
+    """
+    total = 0
+    trainable = 0
+    for p in model.parameters():
+        total += p.numel()
+        if p.requires_grad:
+            trainable += p.numel()
+    print(f"total params: {millify(total)}. Trainable params: {millify(total)}")
+    return total, trainable
