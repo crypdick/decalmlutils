@@ -17,7 +17,7 @@ repos:
     - id: ruff
     # run on ipynb, too
       types_or: [ python, pyi, jupyter ]
-      args: [ --fix ]
+      args: ["--fix", "--show-source"]
     # Run the formatter.
     - id: ruff-format
       types_or: [ python, pyi, jupyter ]
@@ -40,6 +40,7 @@ repos:
     - id: check-yaml
     - id: check-toml
     - id: check-ast
+    - id: check-yaml
       language: python
       types: [python]
     - id: check-merge-conflict
@@ -47,3 +48,4 @@ repos:
     - id: name-tests-test
       args: ['--django']   # to match test*.py instead of *test.py
     - id: requirements-txt-fixer
+    - id: debug-statements
