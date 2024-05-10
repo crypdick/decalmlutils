@@ -28,7 +28,7 @@ jobs:
       run: |
         echo $(python --version)
         python -m pip install --upgrade pip
-        if [ -f requirements-dev.txt ]; then pip install ".[all]"; fi
+        pip install ".[all]"
         make test_config
     - name: Run tests
       run: |
