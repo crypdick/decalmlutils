@@ -8,7 +8,7 @@ from decalmlutils.logging_utils import setup_default_logging
 warnings.simplefilter("always", DeprecationWarning)
 
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 
 setup_default_logging()
