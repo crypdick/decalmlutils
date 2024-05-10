@@ -8,7 +8,7 @@ from rd_utils.logging_utils import setup_default_logging
 warnings.simplefilter("always", DeprecationWarning)
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 
 setup_default_logging()
