@@ -68,13 +68,7 @@ _extras = {
     "slack": ["slack_sdk"],
     "jira": ["jira"],
     "metaflow": ["metaflow", "click", "jinja2", "graphviz"],
-    "dev": [
-        "bump2version",
-        "isort",
-        "ruff",
-        "pre-commit",
-        "ipython",
-    ],
+    "dev": ["bump2version", "isort", "ruff", "pre-commit", "ipython", "build", "twine"],
     #  "docs": ["sphinx"],
     "tests": [
         "pytest",
