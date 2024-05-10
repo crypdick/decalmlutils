@@ -15,9 +15,10 @@ from sklearn.metrics import (
     precision_recall_fscore_support,
     roc_auc_score,
 )
-from tensors import arr_to_tensor, threshold_confidences
 from torch import Tensor
 from torch.nn import MSELoss
+
+from rd_utils.tensors import arr_to_tensor, threshold_confidences
 
 logger = logging.getLogger(__name__)
 
