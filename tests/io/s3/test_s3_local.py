@@ -1,6 +1,6 @@
 import os
 
-from decalmlutils.conf import settings
+from boilerplate.conf import settings
 from decalmlutils.io.aws.s3_local import local_fpath_to_s3url, s3url_to_local_mirror
 
 

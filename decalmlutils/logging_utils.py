@@ -3,7 +3,7 @@ import logging.handlers
 import sys
 import traceback
 
-from .conf import settings
+from ..boilerplate.conf import settings
 from .io.disk.misc import create_dir_if_not_exists
 
 LEVEL = logging.INFO  # set global logging level

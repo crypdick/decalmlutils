@@ -155,18 +155,6 @@ def pprint_list(items: list[Any]) -> str:
     return pprint.pformat(natural_sort(items))
 
 
-def pandas_print_everything():
-    """
-    Sets global pandas print options to print everything.
-    """
-    import pandas as pd
-
-    pd.set_option("display.max_rows", None)
-    pd.set_option("display.max_columns", None)
-    pd.set_option("display.width", None)
-    pd.set_option("display.max_colwidth", None)
-
-
 @beartype
 def kwargs_to_filename(
     date: DateType = None,

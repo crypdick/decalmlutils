@@ -10,7 +10,7 @@
 **decalmlutils** is a lightweight python library that contains functions and code snippets that
 I use in my everyday research with Machine Learning.
 
-I created this repo because I was tired of always looking up same code from older projects and I wanted to gain some experience in building a Python library.
+I created this repo because I was tired of always looking up same code from older projects.
 By making this available to everyone it gives me easy access to code I use frequently and it can help others in their machine learning work.
 If you find any bugs or something doesn't make sense please feel free to open an issue.
 
@@ -59,10 +59,10 @@ Text related function that can be useful when working with machine learning.
 
 <br>
 
-# Snippets
+# Boilerplate
 
-This is a very large variety of Python snippets without a certain theme. I put them in the most frequently used ones while keeping a logical order.
-I like to have them as simple and as efficient as possible.
+These are code snippets which need to be modified before they can be used in a project.
+I keep them in a separate directory so that they do not clutter the `decalmlutils` package.
 
 | Name | Description |
 |:-|:-|
@@ -77,8 +77,3 @@ I like to have them as simple and as efficient as possible.
 | Name 	| Description 	| Links 	|
 |:- |:- |:- |
 | | | |
-
-
-# TODO
-
--

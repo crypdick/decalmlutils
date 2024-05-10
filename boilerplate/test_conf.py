@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from decalmlutils.conf import Settings
+from boilerplate.conf import Settings
 
 
 def test_default_settings():
