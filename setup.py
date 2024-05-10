@@ -69,17 +69,20 @@ _extras = {
     "jira": ["jira"],
     "metaflow": ["metaflow", "click", "jinja2", "graphviz"],
     "dev": [
-        "hypothesis",
         "bump2version",
         "isort",
         "ruff",
+        "pre-commit",
+        "ipython",
+    ],
+    #  "docs": ["sphinx"],
+    "tests": [
         "pytest",
         "pytest-cov",
         "pytest-env",
         "pytest-xdist",
         "pytest-mock",
-        "pre-commit",
-        "ipython",
+        "hypothesis",
     ],
 }
 extras = {
