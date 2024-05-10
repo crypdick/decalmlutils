@@ -11,11 +11,11 @@
 
 
 
-**rd_utils** is a lightweight python library that contains functions and code snippets that 
+**rd_utils** is a lightweight python library that contains functions and code snippets that
 I use in my everyday research with Machine Learning.
 
-I created this repo because I was tired of always looking up same code from older projects and I wanted to gain some experience in building a Python library. 
-By making this available to everyone it gives me easy access to code I use frequently and it can help others in their machine learning work. 
+I created this repo because I was tired of always looking up same code from older projects and I wanted to gain some experience in building a Python library.
+By making this available to everyone it gives me easy access to code I use frequently and it can help others in their machine learning work.
 If you find any bugs or something doesn't make sense please feel free to open an issue.
 
 
@@ -28,7 +28,13 @@ If you find any bugs or something doesn't make sense please feel free to open an
 You can install `rd_utils` with pip from GitHub:
 
 ```bash
-pip install git+https://github.com/crypdick/rd_utils
+pip install "git+https://github.com/crypdick/rd_utils"
+```
+
+Or locally, by cloning the repository and running:
+
+```bash
+pip install -e ".[all]"
 ```
 
 
@@ -75,3 +81,8 @@ I like to have them as simple and as efficient as possible.
 | Name 	| Description 	| Links 	|
 |:- |:- |:- |
 | | | |
+
+
+# TODO
+
+-
