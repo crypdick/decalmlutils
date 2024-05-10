@@ -22,7 +22,7 @@ To create the package for pypi.
 
    For the sources, run: "python setup.py sdist"
    You should now have a /dist directory with both .whl and .tar.gz source versions.
-   
+
    Usualy run: "python setup.py sdist bdist_wheel"
 
 5. Check that everything looks correct by uploading the package to the pypi test server:
@@ -45,9 +45,47 @@ To create the package for pypi.
 9. Update README.md to redirect to correct documentation.
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
-extras = {}
+base_reqs = [
+    "tqdm >= 4.27",
+    "ftfy >= 5.8",
+    "beartype",
+    "pydantic",
+    "pydantic-settings",
+    "natsort",
+]
+_extras = {
+    "ds": ["pandas", "numpy", "scikit-learn", "pyarrow"],
+    "distributed": ["ray", "tenacity"],
+    "torch": ["torch", "torchvision"],
+    "plotting": ["matplotlib>=3.4.0", "seaborn"],
+    "profiling": ["pyinstrument"],
+    "aws": ["boto3", "watchtower", "tenacity"],
+    "geo": ["geojson"],
+    "web": ["requests", "tenacity"],
+    "git": ["GitPython"],
+    "slack": ["slack_sdk"],
+    "jira": ["jira"],
+    "metaflow": ["metaflow", "click", "jinja2", "graphviz"],
+    "dev": [
+        "hypothesis",
+        "bump2version",
+        "isort",
+        "ruff",
+        "pytest",
+        "pytest-cov",
+        "pytest-env",
+        "pytest-xdist",
+        "pytest-mock",
+        "pre-commit",
+        "ipython",
+    ],
+}
+extras = {
+    **_extras,
+    "all": list({dep for deps in _extras.values() for dep in deps}),
+}
 
 setup(
     name="rd_utils",
@@ -62,16 +100,9 @@ setup(
     url="https://github.com/crypdick/rd_utils",
     package_dir={"": "rd_utils"},
     packages=find_packages("rd_utils"),
-    install_requires=[
-        "scikit-learn",
-        "numpy",
-        "requests",
-        "tqdm >= 4.27",
-        "ftfy >= 5.8",
-        "matplotlib>=3.4.0",
-    ],
+    install_requires=base_reqs,
     extras_require=extras,
-    python_requires=">=3.6.0",
+    python_requires=">=3.9.0",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -80,8 +111,6 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
 )
