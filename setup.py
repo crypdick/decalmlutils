@@ -92,7 +92,7 @@ extras = {
 
 setup(
     name="rd_utils",
-    version="0.0.2",
+    version="0.0.3",
     author="Richard Decal",
     author_email="public@richarddecal.com",
     description="Useful functions when working with Machine Learning in Python",
