@@ -1,6 +1,7 @@
 """
 stolen from https://jpweytjens.be/read-multiple-files-with-pandas-fast/
 """
+
 from functools import partial
 
 import pandas as pd

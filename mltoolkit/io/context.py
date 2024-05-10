@@ -81,9 +81,9 @@ class DisableKeyboardInterrupt:
         if self.num_attempts >= self.max_attempts:
             logger.info("Max attempts reached. Interrupting code block.")
             self.old_handler(*self.signal_received)
-            os.environ[
-                "KEYBOARD_INTERRUPTED"
-            ] = "1"  # signals downstream code that we received a keyboard interrupt
+            os.environ["KEYBOARD_INTERRUPTED"] = (
+                "1"  # signals downstream code that we received a keyboard interrupt
+            )
         else:
             logger.info(
                 "Keyboard interrupt has been disabled! If you want to kill this code block, look up the process's "
