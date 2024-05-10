@@ -1,14 +1,10 @@
 # rd_utils
 
-[![rd_utils](https://circleci.com/gh/crypdick/rd_utils.svg?style=shield)](https://app.circleci.com/pipelines/github/crypdick/rd_utils)
-[![Generic badge](https://img.shields.io/badge/Working-Progress-red.svg)]()
+[![Build status](https://github.com/crypdick/rd_utils/actions/workflows/python-app.yml/badge.svg)](https://github.com/crypdick/rd_utils/actions/workflows/python-app.yml)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Generic badge](https://img.shields.io/badge/Updated-July_2021-yellow.svg)]()
-[![Generic badge](https://img.shields.io/badge/Website-Online-green.svg)](https://crypdick.github.io/rd_utils/)
-[![pages-build-deployment](https://github.com/crypdick/rd_utils/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/crypdick/rd_utils/actions/workflows/pages/pages-build-deployment)
-
-
-
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/crypdick/rd_utils/blob/main/.pre-commit-config.yaml)
 
 
 **rd_utils** is a lightweight python library that contains functions and code snippets that
