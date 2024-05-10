@@ -3,8 +3,8 @@ from unittest.mock import MagicMock
 
 from beartype import beartype
 from beartype.typing import TYPE_CHECKING, Dict, Optional
-from rd_utils.io.aws.secretsmanager import get_secret
-from rd_utils.io.sort import natural_sort
+from mltoolkit.io.aws.secretsmanager import get_secret
+from mltoolkit.io.sort import natural_sort
 
 from slack_sdk import WebClient
 

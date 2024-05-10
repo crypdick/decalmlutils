@@ -6,7 +6,7 @@ from beartype import beartype
 from beartype.typing import Callable, Literal, Optional
 from torchvision import transforms
 
-from rd_utils.io.misc import millify
+from mltoolkit.io.misc import millify
 
 TransformVersion = Literal["v1", "v2", "v3"]
 TransformType = Literal["train", "eval", "corrupt"]

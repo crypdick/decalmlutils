@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from rd_utils.conf import Settings
+from mltoolkit.conf import Settings
 
 
 def test_default_settings():

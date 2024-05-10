@@ -21,23 +21,23 @@ from metaflow import S3
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fixed
 from tqdm import tqdm
 
-from rd_utils.conf import settings
-from rd_utils.io.aws.s3 import __get_file_bytes_from_s3, split_s3url
-from rd_utils.io.disk.img import (
+from mltoolkit.conf import settings
+from mltoolkit.io.aws.s3 import __get_file_bytes_from_s3, split_s3url
+from mltoolkit.io.disk.img import (
     convert_image_type,
     create_dummy_img,
     img_bytes_to_Image,
     write_img_to_disk,
 )
-from rd_utils.io.disk.misc import (
+from mltoolkit.io.disk.misc import (
     create_dir_if_not_exists,
     delete_file_if_exists,
     file_exists,
     read_bytes_from_disk,
     write_bytes_to_disk,
 )
-from rd_utils.io.disk.parquet import read_parquet
-from rd_utils.tensors import get_chunks
+from mltoolkit.io.disk.parquet import read_parquet
+from mltoolkit.tensors import get_chunks
 
 # do not use get_cloudwatch_logger here-- it will cause Ray pickling errors
 logger = logging.getLogger(__name__)

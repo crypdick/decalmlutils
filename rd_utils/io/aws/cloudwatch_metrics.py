@@ -12,18 +12,18 @@ from beartype.typing import Dict, Iterable, Optional, Union
 from metaflow import Flow, current
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
-from rd_utils.conf import settings
-from rd_utils.io.aws import get_aws_client
-from rd_utils.io.aws.sns import publish_to_sns
-from rd_utils.io.git_ import get_current_local_branch, get_current_local_commit
-from rd_utils.io.mflow.artifacts import get_artifact_from_lineage
-from rd_utils.io.mflow.cloudwatch_logs import (
+from mltoolkit.conf import settings
+from mltoolkit.io.aws import get_aws_client
+from mltoolkit.io.aws.sns import publish_to_sns
+from mltoolkit.io.git_ import get_current_local_branch, get_current_local_commit
+from mltoolkit.io.mflow.artifacts import get_artifact_from_lineage
+from mltoolkit.io.mflow.cloudwatch_logs import (
     get_cloudwatch_log_link,
 )
-from rd_utils.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
-from rd_utils.io.misc import millify
-from rd_utils.io.slack import METRICS_ERRORS_CHANNEL, Slacker
-from rd_utils.tensors import get_chunks
+from mltoolkit.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
+from mltoolkit.io.misc import millify
+from mltoolkit.io.slack import METRICS_ERRORS_CHANNEL, Slacker
+from mltoolkit.tensors import get_chunks
 
 
 def log_metrics_to_cloudwatch(

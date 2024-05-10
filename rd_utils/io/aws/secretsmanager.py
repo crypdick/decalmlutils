@@ -11,7 +11,7 @@ from beartype import beartype
 from beartype.typing import Dict, Union
 from botocore.exceptions import ClientError, NoCredentialsError
 
-from rd_utils.conf import settings
+from mltoolkit.conf import settings
 
 SECRET_NAME_REGEX = re.compile(r"[-/_+=.@!a-zA-Z0-9]+")
 

@@ -4,7 +4,7 @@ import hypothesis.strategies as strat
 import pytest
 from hypothesis import given, settings
 
-from rd_utils.io.misc import (
+from mltoolkit.io.misc import (
     all_elements_same,
     flatten_list,
     format_date,
@@ -12,7 +12,7 @@ from rd_utils.io.misc import (
     kwargs_to_filename,
     millify,
 )
-from rd_utils.training import generate_seed
+from mltoolkit.training import generate_seed
 
 
 @given(

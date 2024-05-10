@@ -1,6 +1,6 @@
 import pytest
 
-import rd_utils.io.aws.s3 as io_s3
+import mltoolkit.io.aws.s3 as io_s3
 
 
 @pytest.fixture
@@ -24,7 +24,7 @@ def bucket_name() -> str:
 )
 def test_split_s3url(bucket_name, s3url):
     """
-    Test rd_utils.io.aws.misc.split_s3url.
+    Test mltoolkit.io.aws.misc.split_s3url.
 
     This is used in conjunction with ls_s3 for instance, in ls_s3_img. Passing empty strings and Nones to
     list_objects_v2 for the prefix is fine.

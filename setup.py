@@ -91,7 +91,7 @@ extras = {
 }
 
 setup(
-    name="rd_utils",
+    name="mltoolkit",
     version="0.0.3",
     author="Richard Decal",
     author_email="public@richarddecal.com",
@@ -100,9 +100,9 @@ setup(
     long_description_content_type="text/markdown",
     keywords="deep learning pytorch numpy",
     license="Apache",
-    url="https://github.com/crypdick/rd_utils",
-    package_dir={"": "rd_utils"},
-    packages=find_packages("rd_utils"),
+    url="https://github.com/crypdick/mltoolkit",
+    package_dir={"": "mltoolkit"},
+    packages=find_packages("mltoolkit"),
     install_requires=base_reqs,
     extras_require=extras,
     python_requires=">=3.9.0",

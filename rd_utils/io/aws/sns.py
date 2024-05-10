@@ -3,8 +3,8 @@ import logging
 
 from beartype import beartype
 
-from rd_utils.conf import settings
-from rd_utils.io.aws import get_aws_client
+from mltoolkit.conf import settings
+from mltoolkit.io.aws import get_aws_client
 
 logger = logging.getLogger(__name__)
 

@@ -5,7 +5,7 @@ from beartype import beartype
 from beartype.typing import Dict, Optional
 from jira import JIRA
 
-from rd_utils.io.aws.secretsmanager import get_secret
+from mltoolkit.io.aws.secretsmanager import get_secret
 
 logger = logging.getLogger(__name__)
 

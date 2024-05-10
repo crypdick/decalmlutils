@@ -6,7 +6,7 @@ from beartype import beartype
 from beartype.typing import Optional
 from metaflow import Flow, Run, current
 
-from rd_utils.io.mflow.runs import get_run_pathspec
+from mltoolkit.io.mflow.runs import get_run_pathspec
 
 logger = logging.getLogger(
     __name__

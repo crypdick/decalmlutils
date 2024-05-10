@@ -18,7 +18,7 @@ from tenacity import (
     wait_random_exponential,
 )
 
-from rd_utils.io.aws import get_aws_client
+from mltoolkit.io.aws import get_aws_client
 
 
 logger = logging.getLogger(__name__)

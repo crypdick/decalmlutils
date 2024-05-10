@@ -4,7 +4,7 @@ from importlib import import_module
 
 from beartype import beartype
 from beartype.typing import Dict
-from rd_utils.io.context import DisableKeyboardInterrupt
+from mltoolkit.io.context import DisableKeyboardInterrupt
 
 
 logger = logging.getLogger(

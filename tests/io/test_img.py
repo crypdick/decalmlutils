@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 
-from rd_utils.io.disk.img import read_img_from_disk
+from mltoolkit.io.disk.img import read_img_from_disk
 
 # create fixtures for temporary RGBA png imgs saved on disk
 # one is just fully opaque white pixels

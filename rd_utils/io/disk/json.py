@@ -4,8 +4,8 @@ import json
 from beartype import beartype
 from beartype.typing import Dict, List, Union
 
-from rd_utils.io.context import safe_open
-from rd_utils.io.disk.misc import create_dir_if_not_exists, read_bytes_from_disk
+from mltoolkit.io.context import safe_open
+from mltoolkit.io.disk.misc import create_dir_if_not_exists, read_bytes_from_disk
 
 
 @beartype

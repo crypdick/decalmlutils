@@ -9,7 +9,7 @@ This is useful for doing flow surgery, such as injecting arbitrary inputs into t
 
 from metaflow import FlowSpec, Parameter, step
 
-from rd_utils.io.aws.cloudwatch_metrics import alert_job_finished
+from mltoolkit.io.aws.cloudwatch_metrics import alert_job_finished
 
 
 class HelloFlowPipeline(FlowSpec):

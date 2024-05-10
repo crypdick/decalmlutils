@@ -4,7 +4,7 @@ import hypothesis.strategies as strat
 from hypothesis import given, settings
 
 
-from rd_utils.io.sort import natural_sort
+from mltoolkit.io.sort import natural_sort
 
 
 @given(

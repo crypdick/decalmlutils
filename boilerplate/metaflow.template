@@ -31,8 +31,8 @@ class {{ name }}(FlowSpec):
     def start(self):
         import time
 
-        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
-        from rd_utils.util.constants import METAFLOW_PROD_PROFILE
+        from mltoolkit.io.aws.cloudwatch import get_cloudwatch_logger
+        from mltoolkit.util.constants import METAFLOW_PROD_PROFILE
 
         self.start_time = time.time()
         {% if test_mode == None %}
@@ -56,7 +56,7 @@ class {{ name }}(FlowSpec):
 
     @step
     def process(self):
-        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
+        from mltoolkit.io.aws.cloudwatch import get_cloudwatch_logger
         logger = get_cloudwatch_logger(os.path.basename(__file__))
         logger.info("Starting processing...")
 
@@ -64,8 +64,8 @@ class {{ name }}(FlowSpec):
 
     @step
     def end(self):
-        from rd_utils.io.aws.cloudwatch import get_cloudwatch_logger
-        from rd_utils.io.aws.cloudwatch_metrics import alert_job_finished
+        from mltoolkit.io.aws.cloudwatch import get_cloudwatch_logger
+        from mltoolkit.io.aws.cloudwatch_metrics import alert_job_finished
         logger = get_cloudwatch_logger(os.path.basename(__file__))
         logger.info("Sending alerts...")
 

@@ -7,7 +7,7 @@ import watchtower
 from beartype import beartype
 from beartype.typing import Optional
 
-from rd_utils.conf import settings
+from mltoolkit.conf import settings
 
 
 class CloudwatchHandlerError(Exception):

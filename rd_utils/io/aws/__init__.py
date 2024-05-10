@@ -1,6 +1,6 @@
 import boto3
 
-from rd_utils.conf import settings
+from mltoolkit.conf import settings
 
 
 def get_aws_client(resource: str, **kwargs):

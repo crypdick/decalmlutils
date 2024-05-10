@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from rd_utils.io.context import DeadlineExceededException, deadline
+from mltoolkit.io.context import DeadlineExceededException, deadline
 
 
 def test_deadline():

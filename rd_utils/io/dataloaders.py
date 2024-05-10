@@ -8,10 +8,10 @@ from PIL import Image
 from torch import Tensor
 from torch.utils.data import Dataset
 
-from rd_utils.io.aws import get_aws_client
-from rd_utils.io.aws.s3_local import check_get_img, s3url_to_local_mirror
-from rd_utils.io.disk.img import create_dummy_img, read_img_from_disk
-from rd_utils.io.disk.misc import delete_file_if_exists
+from mltoolkit.io.aws import get_aws_client
+from mltoolkit.io.aws.s3_local import check_get_img, s3url_to_local_mirror
+from mltoolkit.io.disk.img import create_dummy_img, read_img_from_disk
+from mltoolkit.io.disk.misc import delete_file_if_exists
 
 TILE_PIXEL_WIDTH = 256
 MOCK_IMG_SIZE = 256
