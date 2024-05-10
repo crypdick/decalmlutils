@@ -18,7 +18,7 @@ from sklearn.metrics import (
 from torch import Tensor
 from torch.nn import MSELoss
 
-from mltoolkit.tensors import arr_to_tensor, threshold_confidences
+from decalmlutils.tensors import arr_to_tensor, threshold_confidences
 
 logger = logging.getLogger(__name__)
 

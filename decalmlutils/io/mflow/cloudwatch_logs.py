@@ -7,7 +7,7 @@ import watchtower
 from beartype import beartype
 from beartype.typing import Optional
 
-from mltoolkit.conf import settings
+from decalmlutils.conf import settings
 
 
 class CloudwatchHandlerError(Exception):

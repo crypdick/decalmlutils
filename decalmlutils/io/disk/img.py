@@ -3,14 +3,14 @@ import logging
 
 import numpy as np
 import PIL
-from mltoolkit.io.context import safe_open
-from mltoolkit.io.disk.misc import create_dir_if_not_exists
 import torchvision.transforms.functional as TF
 from beartype import beartype
 from beartype.typing import Literal, Union
 from PIL import Image
 from torch import Tensor
 
+from decalmlutils.io.context import safe_open
+from decalmlutils.io.disk.misc import create_dir_if_not_exists
 
 # note: do not use get_cloudwatch_logger() here. it will cause Ray serialization errors
 logger = logging.getLogger(__name__)

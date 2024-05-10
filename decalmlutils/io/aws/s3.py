@@ -18,8 +18,7 @@ from tenacity import (
     wait_random_exponential,
 )
 
-from mltoolkit.io.aws import get_aws_client
-
+from decalmlutils.io.aws import get_aws_client
 
 logger = logging.getLogger(__name__)
 

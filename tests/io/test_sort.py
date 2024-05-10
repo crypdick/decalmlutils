@@ -3,8 +3,7 @@ from collections import Counter
 import hypothesis.strategies as strat
 from hypothesis import given, settings
 
-
-from mltoolkit.io.sort import natural_sort
+from decalmlutils.io.sort import natural_sort
 
 
 @given(

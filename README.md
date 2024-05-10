@@ -1,13 +1,13 @@
-# mltoolkit
+# decalmlutils
 
-[![Build status](https://github.com/crypdick/mltoolkit/actions/workflows/python-app.yml/badge.svg)](https://github.com/crypdick/mltoolkit/actions/workflows/python-app.yml)
+[![Build status](https://github.com/crypdick/decalmlutils/actions/workflows/python-app.yml/badge.svg)](https://github.com/crypdick/decalmlutils/actions/workflows/python-app.yml)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/crypdick/mltoolkit/blob/main/.pre-commit-config.yaml)
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/crypdick/decalmlutils/blob/main/.pre-commit-config.yaml)
 
 
-**mltoolkit** is a lightweight python library that contains functions and code snippets that
+**decalmlutils** is a lightweight python library that contains functions and code snippets that
 I use in my everyday research with Machine Learning.
 
 I created this repo because I was tired of always looking up same code from older projects and I wanted to gain some experience in building a Python library.
@@ -17,14 +17,14 @@ If you find any bugs or something doesn't make sense please feel free to open an
 
 <br/>
 
-# mltoolkit
+# decalmlutils
 
 ## Installation
 
-You can install `mltoolkit` with pip from GitHub:
+You can install `decalmlutils` with pip from GitHub:
 
 ```bash
-pip install "git+https://github.com/crypdick/mltoolkit"
+pip install "git+https://github.com/crypdick/decalmlutils"
 ```
 
 Or locally, by cloning the repository and running:
@@ -36,7 +36,7 @@ pip install -e ".[all]"
 
 ## Functions
 
-All function implemented in the **mltoolkit** module.
+All function implemented in the **decalmlutils** module.
 
 ### Array Functions
 

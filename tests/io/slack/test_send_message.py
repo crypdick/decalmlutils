@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pytest
 
-from mltoolkit.io.slack import BOT_TEST_CHANNEL, Slacker
+from decalmlutils.io.slack import BOT_TEST_CHANNEL, Slacker
 
 
 @pytest.mark.skip(

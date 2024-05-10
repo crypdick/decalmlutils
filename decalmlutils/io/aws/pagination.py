@@ -7,9 +7,9 @@ from metaflow import S3
 from tenacity import Retrying, wait_exponential
 from tqdm import tqdm
 
-from mltoolkit.conf import settings
-from mltoolkit.io.aws import get_aws_client
-from mltoolkit.io.aws.s3 import split_s3url
+from decalmlutils.conf import settings
+from decalmlutils.io.aws import get_aws_client
+from decalmlutils.io.aws.s3 import split_s3url
 
 # do not use get_cloudwatch_logger here-- it will cause Ray pickling errors
 logger = logging.getLogger(__name__)

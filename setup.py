@@ -91,7 +91,7 @@ extras = {
 }
 
 setup(
-    name="mltoolkit",
+    name="decalmlutils",
     version="0.0.3",
     author="Richard Decal",
     author_email="public@richarddecal.com",
@@ -100,9 +100,9 @@ setup(
     long_description_content_type="text/markdown",
     keywords="deep learning pytorch numpy",
     license="Apache",
-    url="https://github.com/crypdick/mltoolkit",
-    package_dir={"": "mltoolkit"},
-    packages=find_packages("mltoolkit"),
+    url="https://github.com/crypdick/decalmlutils",
+    package_dir={"": "decalmlutils"},
+    packages=find_packages("decalmlutils"),
     install_requires=base_reqs,
     extras_require=extras,
     python_requires=">=3.9.0",

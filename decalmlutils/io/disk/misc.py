@@ -8,7 +8,7 @@ from contextlib import suppress
 from beartype import beartype
 from beartype.typing import Any
 
-from mltoolkit.io.context import safe_open
+from decalmlutils.io.context import safe_open
 
 # note: do not use get_cloudwatch_logger() here. it will cause Ray serialization errors
 logger = logging.getLogger(__name__)

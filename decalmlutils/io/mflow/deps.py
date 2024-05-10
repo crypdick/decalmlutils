@@ -4,8 +4,8 @@ from importlib import import_module
 
 from beartype import beartype
 from beartype.typing import Dict
-from mltoolkit.io.context import DisableKeyboardInterrupt
 
+from decalmlutils.io.context import DisableKeyboardInterrupt
 
 logger = logging.getLogger(
     __name__

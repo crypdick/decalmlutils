@@ -4,7 +4,7 @@ import hypothesis.strategies as strat
 import pytest
 from hypothesis import given, settings
 
-from mltoolkit.io.misc import (
+from decalmlutils.io.misc import (
     all_elements_same,
     flatten_list,
     format_date,
@@ -12,7 +12,7 @@ from mltoolkit.io.misc import (
     kwargs_to_filename,
     millify,
 )
-from mltoolkit.training import generate_seed
+from decalmlutils.training import generate_seed
 
 
 @given(

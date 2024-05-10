@@ -4,9 +4,9 @@ import logging
 from beartype import beartype
 from beartype.typing import Dict, Optional, Tuple
 
-from mltoolkit.conf import settings
-from mltoolkit.io.aws import get_aws_client
-from mltoolkit.tensors import get_chunks
+from decalmlutils.conf import settings
+from decalmlutils.io.aws import get_aws_client
+from decalmlutils.tensors import get_chunks
 
 logger = logging.getLogger(__name__)
 

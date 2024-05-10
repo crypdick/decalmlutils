@@ -3,7 +3,7 @@ import pytest
 from hypothesis import example, given
 from hypothesis import strategies as strat
 
-from mltoolkit.tensors import get_chunks
+from decalmlutils.tensors import get_chunks
 
 
 @given(

@@ -1,4 +1,4 @@
-from mltoolkit.training import create_transform, generate_seed, seed_everything
+from decalmlutils.training import create_transform, generate_seed, seed_everything
 
 
 def test_seed_everything():

@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from mltoolkit.io.context import DeadlineExceededException, deadline
+from decalmlutils.io.context import DeadlineExceededException, deadline
 
 
 def test_deadline():

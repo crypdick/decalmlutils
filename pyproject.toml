@@ -10,7 +10,7 @@ typing-modules = ["beartype.typing"]
 docstring-code-format = true
 
 [tool.ruff.lint.isort]
-known-first-party=["mltoolkit"]
+known-first-party=["decalmlutils"]
 
 
 [tool.pytest.ini_options]

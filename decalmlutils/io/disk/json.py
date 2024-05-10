@@ -4,8 +4,8 @@ import json
 from beartype import beartype
 from beartype.typing import Dict, List, Union
 
-from mltoolkit.io.context import safe_open
-from mltoolkit.io.disk.misc import create_dir_if_not_exists, read_bytes_from_disk
+from decalmlutils.io.context import safe_open
+from decalmlutils.io.disk.misc import create_dir_if_not_exists, read_bytes_from_disk
 
 
 @beartype

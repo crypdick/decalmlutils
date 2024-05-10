@@ -1,6 +1,6 @@
 import boto3
 
-from mltoolkit.conf import settings
+from decalmlutils.conf import settings
 
 
 def get_aws_client(resource: str, **kwargs):

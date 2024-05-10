@@ -5,7 +5,7 @@ from beartype import beartype
 from beartype.typing import Dict, Optional
 from jira import JIRA
 
-from mltoolkit.io.aws.secretsmanager import get_secret
+from decalmlutils.io.aws.secretsmanager import get_secret
 
 logger = logging.getLogger(__name__)
 

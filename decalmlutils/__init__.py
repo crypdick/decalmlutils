@@ -2,7 +2,7 @@
 # make sure warnings are imported
 import warnings
 
-from mltoolkit.logging_utils import setup_default_logging
+from decalmlutils.logging_utils import setup_default_logging
 
 # always show deprecation warnings
 warnings.simplefilter("always", DeprecationWarning)

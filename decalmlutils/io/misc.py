@@ -10,7 +10,7 @@ import numpy as np
 from beartype import beartype
 from beartype.typing import Any, Dict, List, Literal, Optional, Set, Tuple, Union
 
-from mltoolkit.io.sort import natural_sort
+from decalmlutils.io.sort import natural_sort
 
 DateType = Literal[None, "date", "datetime"]
 

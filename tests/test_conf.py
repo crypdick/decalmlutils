@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from mltoolkit.conf import Settings
+from decalmlutils.conf import Settings
 
 
 def test_default_settings():

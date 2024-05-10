@@ -3,8 +3,8 @@ import logging
 
 from beartype import beartype
 
-from mltoolkit.conf import settings
-from mltoolkit.io.aws import get_aws_client
+from decalmlutils.conf import settings
+from decalmlutils.io.aws import get_aws_client
 
 logger = logging.getLogger(__name__)
 

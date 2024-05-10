@@ -1,8 +1,7 @@
 import os
 
-
-from mltoolkit.conf import settings
-from mltoolkit.io.aws.s3_local import local_fpath_to_s3url, s3url_to_local_mirror
+from decalmlutils.conf import settings
+from decalmlutils.io.aws.s3_local import local_fpath_to_s3url, s3url_to_local_mirror
 
 
 def test_s3_to_local_fpath_symmetric():

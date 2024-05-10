@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 
-from mltoolkit.io.disk.img import read_img_from_disk
+from decalmlutils.io.disk.img import read_img_from_disk
 
 # create fixtures for temporary RGBA png imgs saved on disk
 # one is just fully opaque white pixels

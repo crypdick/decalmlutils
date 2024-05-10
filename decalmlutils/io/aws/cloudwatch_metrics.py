@@ -12,18 +12,16 @@ from beartype.typing import Dict, Iterable, Optional, Union
 from metaflow import Flow, current
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
-from mltoolkit.conf import settings
-from mltoolkit.io.aws import get_aws_client
-from mltoolkit.io.aws.sns import publish_to_sns
-from mltoolkit.io.git_ import get_current_local_branch, get_current_local_commit
-from mltoolkit.io.mflow.artifacts import get_artifact_from_lineage
-from mltoolkit.io.mflow.cloudwatch_logs import (
-    get_cloudwatch_log_link,
-)
-from mltoolkit.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
-from mltoolkit.io.misc import millify
-from mltoolkit.io.slack import METRICS_ERRORS_CHANNEL, Slacker
-from mltoolkit.tensors import get_chunks
+from decalmlutils.conf import settings
+from decalmlutils.io.aws import get_aws_client
+from decalmlutils.io.aws.sns import publish_to_sns
+from decalmlutils.io.git_ import get_current_local_branch, get_current_local_commit
+from decalmlutils.io.mflow.artifacts import get_artifact_from_lineage
+from decalmlutils.io.mflow.cloudwatch_logs import get_cloudwatch_log_link
+from decalmlutils.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
+from decalmlutils.io.misc import millify
+from decalmlutils.io.slack import METRICS_ERRORS_CHANNEL, Slacker
+from decalmlutils.tensors import get_chunks
 
 
 def log_metrics_to_cloudwatch(
