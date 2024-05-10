@@ -33,3 +33,6 @@ jobs:
     - name: Run tests
       run: |
         make unittest
+    - name: Lint
+      run: |
+        ruff check
