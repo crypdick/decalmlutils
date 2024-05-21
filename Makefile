@@ -28,3 +28,9 @@ help: ## Display make help.
 unittest:  ## run unit tests
 	@echo "+ $@"
 	@$(PYTHON_INTERPRETER) -m pytest --numprocesses=auto --failed-first --dist=loadfile -vv --durations=10
+
+pypi:  ## clean the build and upload to pypi
+	@echo "+ $@"
+	@make clean-build
+	@$(PYTHON_INTERPRETER) -m build
+	@twine upload dist/* --verbose
