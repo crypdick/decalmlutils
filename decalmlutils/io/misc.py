@@ -159,6 +159,7 @@ def pprint_list(items: list[Any]) -> str:
 def kwargs_to_filename(
     date: DateType = None,
     ext="",
+    prefix: Optional[str] = None,
     suffix: Optional[str] = None,
     key_only: Optional[list[str]] = None,
     **kwargs,
@@ -229,6 +230,8 @@ def kwargs_to_filename(
     filename = filename.strip()
     filename = filename.strip("+")
 
+    if prefix:
+        filename = f"{prefix}__{filename}"
     if suffix:
         filename = f"{filename}__{suffix}"
     if ext:
