@@ -94,7 +94,7 @@ setup(
     keywords="deep learning pytorch numpy",
     license="Apache",
     url="https://github.com/crypdick/decalmlutils",
-    packages=find_packages(include=["decalmlutils"]),
+    packages=find_packages(include=["decalmlutils*"]),
     install_requires=base_reqs,
     extras_require=extras,
     python_requires=">=3.9.0",
