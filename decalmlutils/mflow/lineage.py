@@ -8,10 +8,10 @@ import requests
 from beartype import beartype
 from beartype.typing import List, Tuple
 
-from decalmlutils.io.mflow.artifacts import ArtifactMatchers
-from decalmlutils.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
-from decalmlutils.io.mflow.runs import _process_run
-from decalmlutils.io.mflow.tasks import get_last_finished_task
+from decalmlutils.mflow.artifacts import ArtifactMatchers
+from decalmlutils.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
+from decalmlutils.mflow.runs import _process_run
+from decalmlutils.mflow.tasks import get_last_finished_task
 
 logger = logging.getLogger(__name__)
 

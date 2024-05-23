@@ -4,7 +4,7 @@ import hypothesis.strategies as strat
 import pytest
 from hypothesis import given, settings
 
-from decalmlutils.io.misc import (
+from decalmlutils.misc import (
     all_elements_same,
     flatten_list,
     format_date,

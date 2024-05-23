@@ -16,11 +16,11 @@ from decalmlutils.conf import settings
 from decalmlutils.io.aws import get_aws_client
 from decalmlutils.io.aws.sns import publish_to_sns
 from decalmlutils.io.git_ import get_current_local_branch, get_current_local_commit
-from decalmlutils.io.mflow.artifacts import get_artifact_from_lineage
-from decalmlutils.io.mflow.cloudwatch_logs import get_cloudwatch_log_link
-from decalmlutils.io.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
-from decalmlutils.io.misc import millify
 from decalmlutils.io.slack import METRICS_ERRORS_CHANNEL, Slacker
+from decalmlutils.mflow.artifacts import get_artifact_from_lineage
+from decalmlutils.mflow.cloudwatch_logs import get_cloudwatch_log_link
+from decalmlutils.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
+from decalmlutils.misc import millify
 from decalmlutils.tensors import get_chunks
 
 

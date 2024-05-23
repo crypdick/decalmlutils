@@ -5,7 +5,7 @@ import torch
 from beartype import beartype
 from beartype.typing import Optional
 
-from decalmlutils.io.misc import millify
+from decalmlutils.misc import millify
 
 
 @beartype
