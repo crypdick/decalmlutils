@@ -8,4 +8,4 @@ from .misc import *  # noqa: F401, F403
 warnings.simplefilter("always", DeprecationWarning)
 
 
-__version__ = "0.0.12"
+__version__ = "0.0.13"
