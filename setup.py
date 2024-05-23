@@ -86,7 +86,7 @@ extras = {
 
 setup(
     name="decalmlutils",
-    version="0.0.8",
+    version="0.0.9",
     author="Richard Decal",
     author_email="public@richarddecal.com",
     description="Useful functions when working with Machine Learning in Python",
