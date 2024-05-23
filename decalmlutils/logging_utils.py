@@ -3,13 +3,12 @@ import logging.handlers
 import sys
 import traceback
 
-from ..boilerplate.conf import settings
 from .io.disk.misc import create_dir_if_not_exists
 
 LEVEL = logging.INFO  # set global logging level
 
 
-def setup_default_logging(level=LEVEL, log_path=settings.LOG_FPATH):
+def setup_default_logging(log_path="/tmp/logs", level=LEVEL):
     logging.root.setLevel(level)
 
     console_handler = logging.StreamHandler()

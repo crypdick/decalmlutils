@@ -28,12 +28,14 @@ addopts = """
 --numprocesses=auto \
 --durations=10 \
 --showlocals \
--vvv
+-m 'not skip'
 """
 # set env vars for pytest. requires pytest-env
 env = [
     "METAFLOW_PROFILE=test"
 ]
+testpaths = ["tests"]
+markers = ["skip"]
 
 [build-system]
 requires = ['setuptools>=42']

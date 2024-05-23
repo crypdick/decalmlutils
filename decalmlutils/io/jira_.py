@@ -5,8 +5,6 @@ from beartype import beartype
 from beartype.typing import Dict, Optional
 from jira import JIRA
 
-from decalmlutils.io.aws.secretsmanager import get_secret
-
 logger = logging.getLogger(__name__)
 
 JIRA_URL = "https://jira.foo.com"
@@ -47,7 +45,7 @@ def add_issues_to_active_sprint(
 
 @beartype
 def get_or_create_epic(
-    jira_project_key: str, summary: str, jira: JIRA = None, **kwargs
+    jira_project_key: str, summary: str, jira: JIRA = None, credentials=None, **kwargs
 ):
     """
 
@@ -60,8 +58,7 @@ def get_or_create_epic(
     Returns:
 
     """
-    creds = get_secret(JIRA_TOKEN_SECRET_NAME, jsonify=True)
-    jira = jira or JIRA(JIRA_URL, basic_auth=tuple(creds.values()))
+    jira = jira or JIRA(JIRA_URL, basic_auth=credentials)
 
     kwargs.pop("issuetype", None)
 

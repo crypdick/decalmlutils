@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 import pytest
 
-from decalmlutils.io.slack import BOT_TEST_CHANNEL, Slacker
-
 
 @pytest.mark.skip(
     reason="run manually only since this actually sends requests to slack"
 )
 def test_send_plot():
+    from decalmlutils.io.slack import BOT_TEST_CHANNEL, Slacker
+
     fig = plt.figure()
     ax1 = fig.add_subplot(2, 1, 1)
     ax1.plot(range(10), "b-")

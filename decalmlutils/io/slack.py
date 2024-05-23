@@ -5,7 +5,6 @@ from beartype import beartype
 from beartype.typing import TYPE_CHECKING, Dict, Optional
 from slack_sdk import WebClient
 
-from decalmlutils.io.aws.secretsmanager import get_secret
 from decalmlutils.io.sort import natural_sort
 
 if TYPE_CHECKING:
@@ -36,13 +35,12 @@ class Slacker:
         client: slack sdk web client for sending files and messages to slack
     """
 
-    def __init__(self, is_prod: bool = True):
+    def __init__(self, token: str, is_prod: bool = True):
         """
         Fetch the token and create the client right away and save them to save time when sending multiple plots.
         """
         if is_prod:
-            _token = get_secret(BOT_TOKEN_SECRET_NAME)
-            self.client = WebClient(_token)
+            self.client = WebClient(token)
         else:
             self.client = MagicMock()
             self.client.chat_postMessage = MagicMock()
