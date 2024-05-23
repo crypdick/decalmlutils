@@ -20,11 +20,17 @@ def _import_submodules(package: Union[str, ModuleType]) -> Dict[str, ModuleType]
     https://stackoverflow.com/a/25562415/4212158
     """
     if isinstance(package, str):
-        package = importlib.import_module(package)
+        try:
+            package = importlib.import_module(package)
+        except ModuleNotFoundError as e:
+            raise ModuleNotFoundError(f"Could not import package: {package}") from e
     results = {}
     for _loader, name, is_pkg in pkgutil.walk_packages(package.__path__):
         full_name = package.__name__ + "." + name
-        results[full_name] = importlib.import_module(full_name)
-        if is_pkg:
-            results.update(_import_submodules(full_name))  # recurse into subpackage
+        try:
+            results[full_name] = importlib.import_module(full_name)
+            if is_pkg:
+                results.update(_import_submodules(full_name))  # recurse into subpackage
+        except ModuleNotFoundError as e:
+            raise ModuleNotFoundError(f"Could not import module: {full_name}") from e
     return results

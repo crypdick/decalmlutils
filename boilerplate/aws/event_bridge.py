@@ -6,7 +6,7 @@ from beartype.typing import Dict, Optional, Tuple
 
 from decalmlutils.conf import settings
 from decalmlutils.io.aws import get_aws_client
-from decalmlutils.tensors import get_chunks
+from decalmlutils.ds.tensors import get_chunks
 
 logger = logging.getLogger(__name__)
 

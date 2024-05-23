@@ -12,7 +12,7 @@ from decalmlutils.misc import (
     kwargs_to_filename,
     millify,
 )
-from decalmlutils.training import generate_seed
+from decalmlutils.ds.training import generate_seed
 
 
 @given(

@@ -1,4 +1,4 @@
-from decalmlutils.training import generate_seed, seed_everything
+from decalmlutils.ds.training import generate_seed, seed_everything
 
 
 def test_seed_everything():

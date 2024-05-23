@@ -56,10 +56,9 @@ base_reqs = [
     "natsort",
 ]
 _extras = {
-    "ds": ["pandas", "numpy", "scikit-learn", "pyarrow"],
+    "ds": ["pandas", "numpy", "scikit-learn", "pyarrow", "torch", "torchvision"],
     "distributed": ["ray", "tenacity"],
-    "torch": ["torch", "torchvision"],
-    "plotting": ["matplotlib>=3.4.0", "seaborn"],
+    "viz": ["matplotlib>=3.4.0", "seaborn"],
     "profiling": ["pyinstrument"],
     "aws": ["boto3", "watchtower", "tenacity"],
     "geo": ["geojson"],

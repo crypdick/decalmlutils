@@ -15,13 +15,13 @@ from tenacity import retry, stop_after_attempt, wait_random_exponential
 from decalmlutils.conf import settings
 from decalmlutils.io.aws import get_aws_client
 from decalmlutils.io.aws.sns import publish_to_sns
-from decalmlutils.io.git_ import get_current_local_branch, get_current_local_commit
-from decalmlutils.io.slack import METRICS_ERRORS_CHANNEL, Slacker
+from decalmlutils.git_.git_ import get_current_local_branch, get_current_local_commit
+from decalmlutils.slack.slack import METRICS_ERRORS_CHANNEL, Slacker
 from decalmlutils.mflow.artifacts import get_artifact_from_lineage
 from decalmlutils.mflow.cloudwatch_logs import get_cloudwatch_log_link
 from decalmlutils.mflow.flows import UPSTREAM_PIPELINE_LINKING_PREFIX
 from decalmlutils.misc import millify
-from decalmlutils.tensors import get_chunks
+from decalmlutils.ds.tensors import get_chunks
 
 
 def log_metrics_to_cloudwatch(

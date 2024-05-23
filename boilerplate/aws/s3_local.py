@@ -37,7 +37,7 @@ from decalmlutils.io.disk.misc import (
     write_bytes_to_disk,
 )
 from decalmlutils.io.disk.parquet import read_parquet
-from decalmlutils.tensors import get_chunks
+from decalmlutils.ds.tensors import get_chunks
 
 # do not use get_cloudwatch_logger here-- it will cause Ray pickling errors
 logger = logging.getLogger(__name__)

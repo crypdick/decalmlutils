@@ -1,4 +1,4 @@
-from decalmlutils.io import git_
+from decalmlutils.git_ import git_
 
 
 def mock_git(mocker):
