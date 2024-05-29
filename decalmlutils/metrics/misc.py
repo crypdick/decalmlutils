@@ -28,6 +28,21 @@ mse_loss = MSELoss(reduction="mean")
 # bce_loss = BCELoss(reduction="none")
 
 
+def invert_distance(distance: Union[np.ndarray, Tensor]):
+    """
+    Given a distance measure (such as L2), convert to a similarity measure
+    i.e. small values become large, and large values become small
+
+    Notes:
+    * Only makes sense for positive distances. If you need to support any real input,
+        use arccot(x) instead.
+    * Positive distances get mapped to similarities in the interval [0, 1]
+    * Much fewer flops than exp(-x^a) or arccot(ax)
+    * Operation is not reversible, e.g. invert_distance(invert_distance(x)) != x
+    """
+    return 1 / (1 + distance)
+
+
 @torch.no_grad()
 @beartype
 def calc_metrics(
